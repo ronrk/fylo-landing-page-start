@@ -1,13 +1,130 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap");
+
+:root {
+  /* ### Primary */
+
+  --very-dark-blue: hsl(243, 87%, 12%);
+  --desaturated-blue: hsl(238, 22%, 44%);
+
+  /* ### Accent */
+
+  --bright-blue: hsl(224, 93%, 58%);
+  --moderate-cyan: hsl(170, 45%, 43%);
+
+  /* ### Neutral */
+
+  --light-grayish-blue: hsl(240, 75%, 98%);
+  --light-gray: hsl(0, 0%, 75%);
+
+  --head-font: "Raleway", sans-serif;
+  --main-font: "Open Sans", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+body {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-family: var(--main-font);
+  background-color: var(--light-grayish-blue);
+}
+
+.page-80 {
+  margin: 6rem;
+  /* width: 100%; */
+}
+
+h1,
+h2,
+ul,
+button,
+a {
+  font-family: var(--head-font);
+}
+
+section {
+  margin-bottom: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 3.5rem;
+  color: var(--very-dark-blue);
+}
+
+p {
+  font-size: 1.8rem;
+  color: var(--desaturated-blue);
+}
+button {
+  cursor: pointer;
+}
+
+.btn-block {
+  display: inline-block;
+  flex: 0.5;
+  font-size: 1.6rem;
+  color: var(--light-grayish-blue);
+  background-color: var(--bright-blue);
+  padding: 1rem 4rem;
+  border: 0;
+  transition: all 0.2s;
+}
+
+.btn-block:hover {
+  opacity: 0.7;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
+}
+
+.input-block {
+  flex: 2;
+  padding-left: 2rem;
+  color: var(--very-dark-blue);
+  font-family: var(--main-font);
+}
+
+#logo {
+  width: 15rem;
+}
+
+.input-error {
+  visibility: hidden;
+  font-size: 1.2rem;
+  display: block;
+  color: var(--light-gray);
+}
+
+.error-red {
+  color: red;
+}
+
+.show-error {
+  visibility: visible;
+}
+
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 7px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  html {
+    font-size: 8px;
+  }
+  section {
+    flex-wrap: wrap;
+  }
 }
